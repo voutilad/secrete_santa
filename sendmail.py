@@ -25,7 +25,7 @@ Please remember to try to send your gift in time for the holidays!
 Remember the rules!
 
 1) Have zero expectations of receiving anything of quality or value
-   (Corollary: Spend as much or as little as you want) 
+   (Corollary: Spend as much or as little as you want)
 2) Share what you receive via email blast with PICS or GTFO
 3) Try to get your stuff shipped before XxxMass and/or Channukah/Hannuka/
    Hakunamattata and/or Kwanza
@@ -56,10 +56,10 @@ def new_message(to_email, from_email, assignment, address):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Bulk emailer for JCSanta!")
     parser.add_argument("-i", dest="input_csv", required=True,
-                        help="path to 2 column csv with columns: "
+                        help="path to 3 column csv with columns: "
                         "[to, assignment, address]")
     parser.add_argument("-u", dest="from_address", required=True,
-                        help="gmail user/email for sending email via SMTP")    
+                        help="gmail user/email for sending email via SMTP")
     parser.add_argument("-d", dest="delimiter", default="\"",
                         help="csv delimiter (default: ','")
     parser.add_argument("-q", dest="quote_char", default="\"",
@@ -85,9 +85,7 @@ if __name__ == "__main__":
                     smtp.send_message(message)
                     cnt = cnt + 1
                 except:
-                    print("Failed to send to: {to}".format(row['to']),
-                          file=sys.stderr)
-            
+                    print("Failed to send to: {to}".format(row['to']), file=sys.stderr)
+
             print("...done! Sent {n} emails.".format(n=cnt))
             smtp.quit()
-

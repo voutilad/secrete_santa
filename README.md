@@ -18,7 +18,7 @@ Bulk emailer for JCSanta!
 
 optional arguments:
   -h, --help       show this help message and exit
-  -i INPUT_CSV     path to 2 column csv with columns: [to, assignment, address]
+  -i INPUT_CSV     path to 3 column csv with columns: [to, assignment, address]
   -u FROM_ADDRESS  gmail user/email for sending email via SMTP
   -d DELIMITER     csv delimiter (default: ','
   -q QUOTE_CHAR    csv quote character (default: '"')
