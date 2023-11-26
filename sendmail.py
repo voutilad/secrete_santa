@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 Mass mail secret santa assignments! Ho ho ho!
 """
