@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Stupid logic for randomizing assignments. I use this once a year
 so it'll stay messy and sloppy
